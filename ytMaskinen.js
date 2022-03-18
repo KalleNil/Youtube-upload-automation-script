@@ -3,9 +3,9 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-//huvuddelen, loopar 60 gånger och byter sida 2 gånger
-for(let i = 0; i<3; i++){
-    for(let x = 0; x<60; x++){
+//huvuddelen, loopar 80 gånger och byter sida 2 gånger
+for(let i = 0; i<5; i++){
+    for(let x = 0; x<80; x++){
         try {
             await sleep(800);
             document.querySelector('.edit-draft-button.style-scope.ytcp-video-list-cell-actions').click();
@@ -17,9 +17,9 @@ for(let i = 0; i<3; i++){
             document.getElementById('next-button').click();
             await sleep(500);
             document.getElementById('done-button').click();
-            await sleep(500);
+            await sleep(3500);
             document.getElementById('close-icon-button').click();
-            await sleep(1000);    
+            await sleep(500);    
           }
           catch(err) {
               console.log("ruben :(");
